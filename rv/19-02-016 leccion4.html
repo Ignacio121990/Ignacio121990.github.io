@@ -32,10 +32,10 @@ document.body.appendChild(renderer.domElement);
     var cubo = new THREE.Mesh(forma,material);
     escena.add(cubo);
     function render(){
-      requestAnimationFrame(render);
+      requestAnimationFrame(renderer);
     renderer.renderer(escena,camara);
     }
-    render();
+    renderer();
     
 </script>
 </body>
