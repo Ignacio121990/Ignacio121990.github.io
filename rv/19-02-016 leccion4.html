@@ -21,7 +21,7 @@ var far= 1000; // plano lejano
 var camara= new THREE.PerspectiveCamera(fov,aspect,near,far);
 camara.position.z=5;
 var renderer = new THREE.WebGLRendererer();
-render.setSize(window.innerWidth,window.innerHeight);
+renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
 </script>
 
@@ -32,7 +32,7 @@ document.body.appendChild(renderer.domElement);
     var cubo = new THREE.Mesh(forma,material);
     escena.add(cubo);
     function render(){
-      requestAnimationFrame{render};
+      requestAnimationFrame(render);
     renderer.renderer(escena,camara);
     }
     render();
