@@ -30,9 +30,9 @@ document.body.appendChild(renderer.domElement);
 
 
 <script>
-  var forma=THREE.SphereGeometry(1)
-  var material = THREE.MeshNormalMaterial();
-    var esfera = THREE.Mesh(forma,material);
+  var forma= new THREE.SphereGeometry(1)
+  var material = new THREE.MeshNormalMaterial();
+    var esfera = new THREE.Mesh(forma,material);
     escena.add(esfera);
     function render(){
       requestAnimationFrame(render);
