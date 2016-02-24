@@ -28,13 +28,14 @@ document.body.appendChild(renderer.domElement);
 
 <script>
   var forma = new THREE.CylinderGeometry( 1,1,5)
-  var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+  var material = new THREE.MeshNormalMaterial();
     var cilindro = new THREE.Mesh(forma,material);
     escena.add(cilindro);
     function render(){
       requestAnimationFrame(render);
       cilindro.rotation.x+= 0.1;
       cilindro.rotation.y+= 0.1;
+      cilindro.rotation.z+= 0.1;
     renderer.render(escena,camara);
     }
     render();
