@@ -31,13 +31,12 @@ document.body.appendChild(renderer.domElement);
 
 <script>
   var forma=THREE.SphereGeometry(1)
-  var material =THREE.MeshNormalMaterial();
-    var esfera= THREE.Mesh(forma,material);
+  var material = THREE.MeshNormalMaterial();
+    var esfera = THREE.Mesh(forma,material);
     escena.add(esfera);
     function render(){
       requestAnimationFrame(render);
-      esfera.rotation.x+= 0.1;
-      esfera.rotation.y+= 0.1;
+     
     renderer.render(escena,camara);
     }
     render();
