@@ -33,10 +33,9 @@ document.body.appendChild(renderer.domElement);
     escena.add(dona);
     function render(){
       requestAnimationFrame(render);
-      dona.rotation.x+= 0.3;
-      dona.rotation.y+= 0.4;
-      dona.rotation.z+= 0.1;
-    renderer.render(escena,camara);
+      dona.rotation.x+= 0.1;
+      dona.rotation.y+= 0.1;
+      renderer.render(escena,camara);
     }
     render();
     
