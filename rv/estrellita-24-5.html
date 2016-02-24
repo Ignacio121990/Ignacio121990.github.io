@@ -25,15 +25,14 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
   var figura = new THREE.Shape();
   //figuras se realizan sobre el plano xy
-  figura.moveTo(10, 10);
-  figura.lineTo(10, 40); 
-  figura.lineTo(40, 40);
-  figura.lineTo(40,80 );
-  figura.lineTo(80,80 );
-  figura.lineTo(80, 120);
-  figura.lineTo(120,120);
-  figura.lineTo(120, 160);
-  figura.lineTo(160, 10);
+  figura.lineTo(20,30);
+figura.lineTo(40,40);
+figura.lineTo(20,50);
+figura.lineTo(10,70);
+figura.lineTo(0,50);
+figura.lineTo(-20,40);
+figura.lineTo(0,30);
+figura.lineTo(10,10)
   // Para generar la malla hay que desarrollar la forma
     var forma= new THREE.ShapeGeometry(figura);
     var malla = new THREE.Mesh(forma);
