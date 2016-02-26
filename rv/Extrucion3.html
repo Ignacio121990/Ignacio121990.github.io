@@ -24,9 +24,8 @@
   //La figura se establece sobre plano zx
   var puntos =[];
   for (var i=0; i<50; i++){
-  puntos.push(new THREE.Vector3(
+  puntos.push(new THREE.Vector2(
      Math.sin ( i*2 )*15+50,   //eje x
-     0,            //eje y
      (1 - 5)*2 ));// eje z 
   }
   var forma = new THREE.LatheGeometry(puntos);
