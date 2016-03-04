@@ -19,7 +19,7 @@ function setup(){
   piernaD.position.z=1;
   pierna1.position.z=1;
   step=.01;
-  escerna= newTHREE.Scene();
+  escerna= new THREE.Scene();
   escena.add(cuerpo);
   escena.add(piernaD);
   escena.add(pierna1);
