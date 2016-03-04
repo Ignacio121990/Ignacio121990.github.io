@@ -15,7 +15,7 @@ function setup(){
   var cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
   piernaD=new Pierna();
   pierna1=new Pierna();
-  cuperpo.position.y=2;
+  cuerpo.position.y=2;
   piernaD.position.z=1;
   piernaT.position.z=1;
   step=.01;
