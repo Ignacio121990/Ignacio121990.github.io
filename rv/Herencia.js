@@ -12,7 +12,7 @@ this.add(this.pie);
 
 Pierna.prototype= newTHREE.Objetc3D;
 function setup(){
-  var cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10);
+  var cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
   piernaD=new Pierna();
   pierna1=new Pierna();
   cuperpo.position.y=2;
