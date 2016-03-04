@@ -38,7 +38,7 @@ function setup(){
     piernaD.rotation.z +=step;
     pierna1.rotation.z -=step;
     }
-    var escena,camara,renderer;
+    var escena,camara,render;
     var step,piernaD,pierna1;
     setup();
     loop();
