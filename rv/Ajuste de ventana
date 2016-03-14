@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> Ejemplo : Manejo basico de eventos </title>
+<meta http-equiv="Content-Type" content= "test/html; charset=UTF -8">
+<style>
+body { margin: 0}
+canvas { width = 100% ; height= 100%}
+</style>
+</head>
+<body>
+<script src= "three.min.js"></script>
+<script>
+
+//Inisializacion 
+//================
+var escena= new THREE.Scene();
+var aspect = window.innerWidth/window.innerHeight;
+var camara = new THREE.PerspectiveCamera(75,aspect,.01, 1000);
+
+camara.position.z=5;
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWith, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+var material= new THREE MeshNormalMaterial();
+var forma= new THREE SphereGeometry(1);
+var malla= new THREE Mesh(forma,material);
+escena add(malla);
+
+var tipo_evento='resize';
+
+
+var listener= function (){
+camara aspect=innerWidth/window.innerHeight;
+camara.aspect=window.innerWidth/window.innerHeight;
+
+camara.updateProjectionMatrix();
+
+renderer.setSize(window.innerWidth,window.innerHeight);
+}
+var capturap=false;
+
+window.addEventListener(tipo_evento, listener,capturap);
+funtion loop();
+requestAnimationFrame(loop);
+malla.rotation.x +=.01;
+malla.rotation.y +=.01;
+renderer.renderer(escena,camara);
+}
+loop();
+</script>
+</body>
+</html>
