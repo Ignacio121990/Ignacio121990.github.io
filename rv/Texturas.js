@@ -1,9 +1,9 @@
 function Completo(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
-  var cara = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/rv/12899665_10153684992446843_1267488120_n.jpg');
-  var brazos = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/rv/12899889_10153685013876843_569751267_n.jpg');
-  var pies = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/rv/12919388_10153685013881843_2062601905_o.jpg');  
+  var cara = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12899665_10153684992446843_1267488120_n.jpg');
+  var brazos = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12899889_10153685013876843_569751267_n.jpg');
+  var pies = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12919388_10153685013881843_2062601905_o.jpg');  
   
   this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4),new THREE.MeshBasicMaterial({map:brazos}));
