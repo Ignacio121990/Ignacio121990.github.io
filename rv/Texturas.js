@@ -19,8 +19,8 @@ function Completo(){
   this.pieD.position.z=1;
   this.pieI.position.y=-3;
   this.pieI.position.z=1;
-  this.pieD.position.x=1;
-  this.pieI.position.x=-1;
+  this.pieD.position.x=2;
+  this.pieI.position.x=-2;
   this.brazoD.rotation.x=1.5;
   this.brazoI.rotation.x=-1.5;
   
