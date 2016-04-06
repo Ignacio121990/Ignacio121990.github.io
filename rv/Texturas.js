@@ -49,7 +49,7 @@ function setup(){
   escena.add(luzPuntual);
     
  camara = new THREE.PerspectiveCamera();
-  camara.position.z = 30;
+  camara.position.y = 30;
   
   renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerHeight*.95, window.innerHeight*.95);
@@ -70,7 +70,7 @@ kirby.pieD.rotation.z += step;
 kirby.pieI.rotation.z -= step;
 
 //kirby.rotation.x += 0.01;
-kirby.rotation.z += 0.01;
+kirby.rotation.y += 0.01;
 }
 
 var escena, camara, renderer;
