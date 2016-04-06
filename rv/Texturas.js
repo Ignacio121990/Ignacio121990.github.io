@@ -10,8 +10,8 @@ function Completo(){
   this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(4),new THREE.MeshLambertMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,5),new THREE.MeshLambertMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.6,0.6,5),new THREE.MeshLambertMaterial({map:brazos}));
-  this.pieI = new THREE.Mesh(new THREE.BoxGeometry(1,0.5,2),new THREE.MeshLambertMaterial({map:pies}));
-  this.pieD = new THREE.Mesh(new THREE.BoxGeometry(1,0.5,2),new THREE.MeshLambertMaterial({map:pies}));
+  this.pieI = new THREE.Mesh(new THREE.BoxGeometry(2,0.5,1),new THREE.MeshLambertMaterial({map:pies}));
+  this.pieD = new THREE.Mesh(new THREE.BoxGeometry(2,0.5,1),new THREE.MeshLambertMaterial({map:pies}));
   
   this.brazoI.position.z=2.3;
   this.brazoD.position.z=-2.3;
