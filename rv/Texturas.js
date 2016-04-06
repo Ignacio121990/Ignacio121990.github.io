@@ -38,9 +38,9 @@ function setup(){
   stepbrazo = 0.017;
   
   luzPuntual = new THREE.PointLight(0xffffff);
-  luzPuntual.position.x=50;
-  luzPuntual.position.y=50;
-  luzPuntual.position.z=50;
+  luzPuntual.position.x=30;
+  luzPuntual.position.y=30;
+  luzPuntual.position.z=30;
   
   escena = new THREE.Scene();
   escena.add(kirby);
@@ -68,7 +68,7 @@ kirby.pieD.rotation.z += step;
 kirby.pieI.rotation.z -= step;
 
 //kirby.rotation.x += 0.01;
-kirby.rotation.x += 0.01;
+kirby.rotation.z += 0.01;
 }
 
 var escena, camara, renderer;
