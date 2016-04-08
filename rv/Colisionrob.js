@@ -80,16 +80,31 @@ function loop(){
   obstaculo4 = raycaster4.intersectObject( cubo4 );
   
   if ((obstaculo1.length > 0 && (obstaculo1[0].distance <= 3)) ||
-      (obstaculo2.length > 0 && (obstaculo2[0].distance <= 3)))
+      (obstaculo2.length > 0 && (obstaculo2[0].distance <= 3))){
+      rotaciony= -rotaciony;  
       stepx= -stepx;
-      
+      }
   if ((obstaculo3.length > 0 && (obstaculo3[0].distance <=3)) ||
-      (obstaculo4.length > 0 && (obstaculo4[0].distance <=3)))
+      (obstaculo4.length > 0 && (obstaculo4[0].distance <=3))){
+       rotacionx= -rotacionx;
       stepy= -stepy;
-      
+      }
+  if (Math.abs(pelota.pieD.rotation.z) > .3 )
+  step = -step;
 
+  if (Math.abs(pelota.brazoD.rotation.x) > 2 || Math.abs(pelota.brazoD.rotation.x) < 1)
+  stepbrazo = -stepbrazo;
+
+  pelota.brazoD.rotation.x += stepbrazo;
+  pelota.brazoI.rotation.x += stepbrazo;
+  pelota.pieD.rotation.z += step;
+  pelota.pieI.rotation.z -= step;
+  pelota.rotation.z=2+rotaciony;
+  pelota.rotation.x=2+rotacionx;
+
+      
   pelota.position.x += stepx;
-  
+  pelota.position.y += stepy;
   raycaster1.set( pelota.position, new THREE.Vector3(1,0,0) );
   raycaster2.set( pelota.position, new THREE.Vector3(-1,0,0) );
   raycaster3.set( pelota.position, new THREE.Vector3(0,1,0) );
@@ -102,6 +117,7 @@ function loop(){
 var cubo1, cubo2, cubo3, cubo4, pelota, escena, camara, renderer;
 var raycaster1, raycaster2, reycaster3, reycaster4, step;
 var obstaculo1, obstaculo2, obstaculo3, obstaculo4;
+var step, stepbrazo, stepx, stepy;
 
 setup();
 loop();
