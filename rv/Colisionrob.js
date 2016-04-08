@@ -70,7 +70,11 @@ function setup(){
   document.body.appendChild( renderer.domElement );
 
   stepx = 0.05;
-  stepy = 0.05;
+  stepy = 0.03;
+  step  =0.01;
+  stepbrazo = 0.017;
+  rotacionx=-1;
+  rotaciony=-1;
 }
 
 function loop(){
