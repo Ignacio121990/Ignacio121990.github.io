@@ -87,7 +87,7 @@ function loop(){
       (obstaculo4.length > 0 && (obstaculo4[0].distance <=3)))
       stepy= -stepy;
       
-  pelota.position.x += stepx;
+
   pelota.position.y += stepy;
   
   raycaster1.set( pelota.position, new THREE.Vector3(1,0,0) );
