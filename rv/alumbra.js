@@ -68,10 +68,7 @@ kirby.prototype.sense=function(environment){
   this.sensor.colision=true;
  else
   this.sensor.colision=false;
- /*if((obstaculo2.length>0&&(obstaculo2[0].distance<=1)))
-  this.sensor2.colision=true;
- else
-  this.sensor2.colision=false;*/
+ 
 }
 
 kirby.prototype.plan = function(environment){
@@ -131,7 +128,7 @@ function setup(){
  mapa[10] = "x                          x";
  mapa[11] = "x                          x";
  mapa[12] = "x                          x";
- mapa[13] = "xxxx         xxx     xxxxxx";
+ mapa[13] = "xxxx         xxx      xxxxxx";
  mapa[14] = "x                          x";
  mapa[15] = "x      xxxxxxxxxxxxxx      x";
  mapa[16] = "x                          x";
@@ -144,8 +141,8 @@ function setup(){
  mapa[23] = "x                          x";
  mapa[24] = "xx            x            x";
  mapa[25] = "x             x            x";
- mapa[26] = "x             x           x";
- mapa[27] = "x             x           x";
+ mapa[26] = "x             x            x";
+ mapa[27] = "x             x            x";
  mapa[28] = "x             x            x";
  mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
  entorno=new Environment();
