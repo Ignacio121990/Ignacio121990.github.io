@@ -31,31 +31,6 @@ function Completo(){
   this.add(this.cuerpo)
 }
 
-Completo.prototype = new THREE.Object3D();
-
-function setup(){
-  kirby = new Completo();
-  
-  step  =0.01;
-  stepbrazo = 0.017;
-  
-  luzPuntual = new THREE.PointLight(0xffffff);
-  luzPuntual.position.x=30;
-  luzPuntual.position.y=30;
-  luzPuntual.position.z=30;
-  
-  escena = new THREE.Scene();
-  escena.add(kirby);
-  escena.add(luzPuntual);
-    
- camara = new THREE.PerspectiveCamera();
-  camara.position.z = 50;
-  
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerHeight*.95, window.innerHeight*.95);
-  document.body.appendChild(renderer.domElement);
-}
-
 
 escena=new THREE.Scene();
 escena.add(malla);
@@ -82,23 +57,11 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
+
+
 function loop(){
-requestAnimationFrame( loop );
-renderer.render (escena, camara);
-if (Math.abs(kirby.pieD.rotation.z) > .3 )
-  step = -step;
-
-if (Math.abs(kirby.brazoD.rotation.x) > 2 || Math.abs(kirby.brazoD.rotation.x) < 1)
-  stepbrazo = -stepbrazo;
-
-kirby.brazoD.rotation.x += stepbrazo;
-kirby.brazoI.rotation.x += stepbrazo;
-kirby.pieD.rotation.z += step;
-kirby.pieI.rotation.z -= step;
 
 
-kirby.rotation.y += 0.01;
-}
 if (keyboard.pressed("P")) {
 renderer.render(escena,camara3);
 }
@@ -111,10 +74,5 @@ requestAnimationFrame(loop);
 }
 
 var camara,camara2,camara3,escena,renderer,malla;
-
-var escena, camara, renderer;
-var step, stepbrazo;
-
-
 setup();
 loop();
