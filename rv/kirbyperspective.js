@@ -74,5 +74,5 @@ requestAnimationFrame(loop);
 }
 
 var camara,camara2,camara3,escena,renderer,malla;
-setup();
+Completo();
 loop();
