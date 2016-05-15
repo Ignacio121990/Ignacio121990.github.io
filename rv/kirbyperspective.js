@@ -22,12 +22,6 @@ function Completo(){
   this.pieI.position.x=1;
   this.brazoD.rotation.x=1.5;
   this.brazoI.rotation.x=-1.5;
-  
-  this.add(this.pieI)
-  this.add(this.pieD)
-  this.add(this.brazoI)
-  this.add(this.brazoD)
-  this.add(this.cuerpo)
 }
 
 
