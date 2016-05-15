@@ -1,3 +1,4 @@
+var keyboard = new THREEx.KeyboardState();
 function Completo(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
@@ -5,8 +6,6 @@ function Completo(){
   var brazos = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12899889_10153685013876843_569751267_n.jpg');
   var pies = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12919388_10153685013881843_2062601905_o.jpg');  
   
-  
-   
   this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3,100,100),new THREE.MeshLambertMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshLambertMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshLambertMaterial({map:brazos}));
