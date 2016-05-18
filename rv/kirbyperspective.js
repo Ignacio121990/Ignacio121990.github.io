@@ -39,14 +39,7 @@ function setup(){
   escena = new THREE.Scene();
   escena.add(kirby);
   escena.add(luzPuntual);
-    
- camara = new THREE.PerspectiveCamera();
-  camara.position.z = 50;
-  
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerHeight*.95, window.innerHeight*.95);
-  document.body.appendChild(renderer.domElement);
-}
+
 
 escena=new THREE.Scene();
 escena.add(malla);
@@ -72,6 +65,36 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
+mallat=new THREE.Mesh(formac);
+mallat.position.z=1;
+mallat.rotation.z=0.75;
+mallat.rotation.x=-0.4;
+mallat.scale.set( 0.1, 0.1, 0.1 );
+
+escena=new THREE.Scene();
+escena.add(malla);
+escena.add(mallat);
+camara=new THREE.PerspectiveCamera();
+camara.position.z=5;
+
+//5 ancho 8 altura
+camara2 = new THREE.OrthographicCamera( 8 / - 2, 8 / 2, 5 / 2, 5 / - 2, 1, 1000 );
+camara2.position.z=5;
+camara2.position.x=1;
+
+//5 sobre 8 es ancho contra altura
+//camara3 = new THREE.PerspectiveCamera( 45, 5 / 8, 1, 1000 );
+camara3 = new THREE.PerspectiveCamera( 30, 5 / 8, 1, 1000 );
+camara3.position.z=10;
+
+escena.add(camara);
+escena.add(camara2);
+escena.add(camara3);
+
+renderer=new THREE.WebGLRenderer();
+renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+document.body.appendChild(renderer.domElement);
+}
 
 
 
@@ -89,6 +112,6 @@ requestAnimationFrame(loop);
 
 }
 
-var camara,camara2,camara3,escena,renderer,malla;
-Completo();
+var camara,camara2,camara3,escena,renderer,malla,mallat;
+setup();
 loop();
