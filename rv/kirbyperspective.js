@@ -29,7 +29,7 @@ function Completo(){
   this.add(this.brazoI)
   this.add(this.brazoD)
   this.add(this.cuerpo)
-}
+
 
 Completo.prototype = new THREE.Object3D();
   step  =0.01;
