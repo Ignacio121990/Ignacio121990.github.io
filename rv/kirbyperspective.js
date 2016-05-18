@@ -89,5 +89,5 @@ kirby.rotation.y += 0.01;
 var escena, camara, renderer;
 var step, stepbrazo;
 
-setup();
+Completo();
 loop();
