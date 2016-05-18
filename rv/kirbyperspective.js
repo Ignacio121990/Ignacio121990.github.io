@@ -1,9 +1,9 @@
 
 var keyboard = new THREEx.KeyboardState();
 function setup(){
-  var esferaForma = new THREE.SphereGeometry(3);
-  var cilindroForma = new THREE.CylinderGeometry(0.5,0.5,4);
-  var rectanguloForma = new THREE.BoxGeometry(0.5,1,2);
+  var esferaForma = new THREE.SphereGeometry(3,100,100);
+  var cilindroForma = new THREE.CylinderGeometry(0.5,0.5,3);
+  var rectanguloForma = new THREE.BoxGeometry(2,1,0.5);
   
   var cuerpo = new THREE.Mesh(esferaForma);
   var brazoI = new THREE.Mesh(cilindroForma);
