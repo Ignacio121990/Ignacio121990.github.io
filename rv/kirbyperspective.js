@@ -1,3 +1,5 @@
+
+var keyboard = new THREEx.KeyboardState();
 function setup(){
   var esferaForma = new THREE.SphereGeometry(3);
   var cilindroForma = new THREE.CylinderGeometry(0.5,0.5,4);
