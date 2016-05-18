@@ -23,7 +23,30 @@ function Completo(){
   this.brazoD.rotation.x=1.5;
   this.brazoI.rotation.x=-1.5;
 }
+Completo.prototype = new THREE.Object3D();
 
+function setup(){
+  kirby = new Completo();
+  
+  step  =0.01;
+  stepbrazo = 0.017;
+  
+  luzPuntual = new THREE.PointLight(0xffffff);
+  luzPuntual.position.x=30;
+  luzPuntual.position.y=30;
+  luzPuntual.position.z=30;
+  
+  escena = new THREE.Scene();
+  escena.add(kirby);
+  escena.add(luzPuntual);
+    
+ camara = new THREE.PerspectiveCamera();
+  camara.position.z = 50;
+  
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize( window.innerHeight*.95, window.innerHeight*.95);
+  document.body.appendChild(renderer.domElement);
+}
 
 escena=new THREE.Scene();
 escena.add(malla);
