@@ -27,6 +27,7 @@ function Completo(){
  
 
 Completo.prototype = new THREE.Object3D();
+ kirby = new Completo();
   step  =0.01;
   stepbrazo = 0.017;
   
