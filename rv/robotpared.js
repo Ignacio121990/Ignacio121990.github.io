@@ -179,7 +179,7 @@ function setup(){
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
- renderer.setSize(window.innerHeight*0.95, window.innerHeight*0.95);
+ renderer.setSize(window.innerHeight, window.innerWidth);
  document.body.appendChild(renderer.domElement);
  entorno.add(camara);
  entorno.add(iluminacion);
