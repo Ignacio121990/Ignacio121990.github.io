@@ -25,7 +25,7 @@ function kirby(x=0, y=0){
   this.add(this.brazoD)
   this.add(this.cuerpo)
  
-   this.luzr=new THREE.SpotLight(0xffffff,100,1000,1);
+   this.luzr=new THREE.SpotLight(0xffffff,100,10);
  this.luzr.target.updateMatrixWorld();
  this.luzr.target.position.set(10,10,20);
  this.add(this.luzr);
