@@ -198,7 +198,9 @@ function loop(){
  renderer.render(entorno,camara);
 }
 
-var entorno,iluminacion,robot,step,angulo,camara,renderer,i,x,y;
+var entorno,luzPuntual,robot,step,angulo,camara,renderer,steppie, stepbrazo;
+
+setup();
 
 setup();
 loop();
