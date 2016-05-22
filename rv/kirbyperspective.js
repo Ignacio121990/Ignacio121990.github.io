@@ -46,7 +46,8 @@ camara2.position.z=15;
 
 camara3 = new THREE.PerspectiveCamera( 30, 10 / 16, 1, 1000 );
 camara3.position.z=30;
-
+camara3.position.x=5;
+camara3.position.y=30;
 escena.add(camara);
 escena.add(camara2);
 escena.add(camara3);
