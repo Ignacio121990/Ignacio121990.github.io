@@ -37,6 +37,7 @@ function setup(){
   escena.add(malla);
   camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
+camara.position.x=10;
 
 //5 ancho 8 altura
 camara2 = new THREE.OrthographicCamera( 16 / - 2, 16 / 2, 10 / 2, 10 / - 2, 1, 1000 );
