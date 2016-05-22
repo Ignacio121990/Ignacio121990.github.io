@@ -18,8 +18,14 @@ function kirby(x=0, y=0){
   this.pieI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
   this.pieD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
  
+ 
+  this.luzr=new THREE.SpotLight(0xffffff,4,1000,0.3);
+ this.luzr.target.updateMatrixWorld();
+ this.luzr.target.position.set(10,0,0);
+ this.add(this.luzr);
+ this.add(this.luzr.target);
    this.sensor=new Sensor();
- //this.sensor2=new Sensor();
+
  this.actuator=new Array();
   this.brazoI.position.z=2.3;
   this.brazoD.position.z=-2.3;
