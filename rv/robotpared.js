@@ -192,9 +192,7 @@ function setup(){
 
 function loop(){
  requestAnimationFrame(loop);
- entorno.sense();
- entorno.plan();
- entorno.act();
+
  renderer.render(entorno,camara);
 }
 
