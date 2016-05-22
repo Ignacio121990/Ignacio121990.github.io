@@ -19,7 +19,13 @@ function kirby(x=0, y=0){
   this.pieD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
  
  
-  this.luzr=new THREE.SpotLight(0xffffff,4,1000,0.3);
+   this.add(this.pieI)
+  this.add(this.pieD)
+  this.add(this.brazoI)
+  this.add(this.brazoD)
+  this.add(this.cuerpo)
+ 
+   this.luzr=new THREE.SpotLight(0xffffff,4,1000,0.3);
  this.luzr.target.updateMatrixWorld();
  this.luzr.target.position.set(10,0,0);
  this.add(this.luzr);
@@ -40,11 +46,7 @@ function kirby(x=0, y=0){
   this.brazoI.rotation.x=-1.5;
   this.cuerpo.castShadow=true;
   
-  this.add(this.pieI)
-  this.add(this.pieD)
-  this.add(this.brazoI)
-  this.add(this.brazoD)
-  this.add(this.cuerpo)
+
 }
   
  kirby.prototype=new Agent();
