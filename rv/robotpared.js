@@ -24,6 +24,7 @@ function kirby(x=0, y=0){
  this.luzr.target.position.set(10,0,0);
  this.add(this.luzr);
  this.add(this.luzr.target);
+ 
    this.sensor=new Sensor();
 
  this.actuator=new Array();
@@ -37,6 +38,7 @@ function kirby(x=0, y=0){
   this.pieI.position.x=1;
   this.brazoD.rotation.x=1.5;
   this.brazoI.rotation.x=-1.5;
+  this.cuerpo.castShadow=true;
   
   this.add(this.pieI)
   this.add(this.pieD)
