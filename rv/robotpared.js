@@ -1,4 +1,5 @@
-function Sensor(position,direction){
+
+  function Sensor(position,direction){
  THREE.Raycaster.call(this,position,direction);
  this.colision=false;
 }
@@ -48,13 +49,6 @@ function Wall(size,x=0,y=0){
 }
 Wall.prototype=new THREE.Mesh();
 
-function WallBasic(size,x=0,y=0){
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new  THREE.MeshBasicMaterial({color:0x2194ce})); 
- this.size=size;
- this.position.x=x;
- this.position.y=y;
-
-WallBasic.prototype=new THREE.Mesh();
 Environment.prototype.setMap=function(map){
  var offset=Math.floor(map.length/2);
  for(var i=0;i<map.length;i++){
@@ -177,7 +171,7 @@ function setup(){
  camara=new THREE.PerspectiveCamera();
  camara.position.z=40;
  renderer = new THREE.WebGLRenderer();
- renderer.setSize(window.innerWidth ,window.innerHeight);
+ renderer.setSize(window.innerHeight*0.95, window.innerHeight*0.95);
  document.body.appendChild(renderer.domElement);
  entorno.add(camara);
  entorno.add(iluminacion);
@@ -192,21 +186,13 @@ function loop(){
  requestAnimationFrame(loop);
  entorno.sense();
  entorno.plan();
- entorno.act()
+ entorno.act();
  renderer.render(entorno,camara);
 }
 
-var entorno,iluminacion,luzPuntual,robot,step,angulo,camara,renderer,steppie, stepbrazo;
+var entorno,luzPuntual,robot,step,angulo,camara,renderer,steppie, stepbrazo;
 
 setup();
 
 setup();
 loop();
-
-
-}
-
-
-
-
-
