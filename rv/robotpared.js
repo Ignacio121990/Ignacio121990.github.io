@@ -48,6 +48,13 @@ function Wall(size,x=0,y=0){
 }
 Wall.prototype=new THREE.Mesh();
 
+function WallBasic(size,x=0,y=0){
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new  THREE.MeshBasicMaterial({color:0x2194ce})); 
+ this.size=size;
+ this.position.x=x;
+ this.position.y=y;
+
+WallBasic.prototype=new THREE.Mesh();
 Environment.prototype.setMap=function(map){
  var offset=Math.floor(map.length/2);
  for(var i=0;i<map.length;i++){
@@ -66,15 +73,6 @@ kirby.prototype.sense=function(environment){
   if ((obstaculo.length>0&&(obstaculo[0].distance<=1))){
   this.sensor.colision=true;
    obstaculo[0].object.material=new THREE.MeshBasicMaterial({color:0xff0000});}
- else
-  this.sensor.colision=false;
-}
-kirby.prototype.plan = function(environment){
- this.actuator.commands=[];
-  if ((obstaculo.length>0&&(obstaculo[0].distance<=1))){
-  this.sensor.colision=true;
-  //obstaculo[0].object.material.color.set(0xff0000);
-  obstaculo[0].object.material=new THREE.MeshBasicMaterial({color:0xff0000});}
  else
   this.sensor.colision=false;
 }
@@ -192,7 +190,9 @@ function setup(){
 
 function loop(){
  requestAnimationFrame(loop);
-
+ entorno.sense();
+ entorno.plan();
+ entorno.act()
  renderer.render(entorno,camara);
 }
 
