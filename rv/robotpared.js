@@ -27,7 +27,7 @@ function kirby(x=0, y=0){
  
    this.luzr=new THREE.SpotLight(0xffffff,4,2000,.01);
  this.luzr.target.updateMatrixWorld();
- this.luzr.target.position.set(0,0,10);
+ this.luzr.target.position.set(0,10,0);
  this.add(this.luzr);
  this.add(this.luzr.target);
  
@@ -157,7 +157,7 @@ function setup(){
  mapa[16] = "x                          x";
  mapa[17] = "x                          x";
  mapa[18] = "x                          x";
- mapa[19] = "x     r                    x";
+ mapa[19] = "x                          x";
  mapa[20] = "x                          x";
  mapa[21] = "x                          x";
  mapa[22] = "x                          x";
@@ -166,7 +166,7 @@ function setup(){
  mapa[25] = "x                          x";
  mapa[26] = "x                          x";
  mapa[27] = "x                          x";
- mapa[28] = "x                          x";
+ mapa[28] = "x     r                    x";
  mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
  entorno=new Environment();
  entorno.setMap(mapa);
