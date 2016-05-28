@@ -165,8 +165,8 @@ function setup(){
  mapa[24] = "x                          x";
  mapa[25] = "x                          x";
  mapa[26] = "x                          x";
- mapa[27] = "x                          x";
- mapa[28] = "x     r                    x";
+ mapa[27] = "xr                          x";
+ mapa[28] = "x                          x";
  mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
  entorno=new Environment();
  entorno.setMap(mapa);
