@@ -137,16 +137,16 @@ kirby.prototype.operations.RotarIzquierda = function(robot,angulo){
 
 function setup(){
  var mapa = new Array();
-   mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxxx     x";
-   mapa[1] ="xxxx                          x";
-   mapa[2] ="xxxx                          x";
-   mapa[3] ="x                             x";
-   mapa[4] ="x                             x";
-   mapa[5] ="x                             x";
-   mapa[6] ="x                          xxxx";
-   mapa[7] ="x                          xxxx";
-   mapa[8] ="x                          xxxx";
-   mapa[9] ="x                             x";
+   mapa[0] = "xxxxxxxxxxxxxxxxxxxxxxxx    xxx";
+   mapa[1] = "xxxx                          x";
+   mapa[2] = "xxxx                          x";
+   mapa[3] = "x                             x";
+   mapa[4] = "x                             x";
+   mapa[5] = "x                             x";
+   mapa[6] = "x                          xxxx";
+   mapa[7] = "x                          xxxx";
+   mapa[8] = "x                          xxxx";
+   mapa[9] = "x                             x";
  mapa[10] = "x                             x";
  mapa[11] = "x                             x";
  mapa[12] = "x          xxxxx              x";
